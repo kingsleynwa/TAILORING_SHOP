@@ -1,3 +1,10 @@
+<!--  W3schools
+    date 19/03/2021
+    title: Login Form 
+    code version: 4.15 December 2020
+    Url: https://www.w3schools.com/howto/howto_css_login_form.asp
+ -->
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +24,7 @@
                 <li><a href="GALLERY.php">Gallery</a></li>
                 <li><a href="ABOUTUS.php">About Us</a></li>
                 <li><a href="LOGIN.php">Log In</a></li>
-                <li><a href="SIGNUP.php">Sign Up</a></li>
+                <li><a href="SignUp.php">Sign Up</a></li>
         </ul>
     </nav>
 
@@ -37,7 +44,7 @@
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php" method="post">
+  <form class="modal-content animate" action="LogIn.php" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="assets/images/img1.jpeg" alt="Avatar" class="display">
@@ -45,10 +52,10 @@
 
     <div class="container">
       <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <input type="text" placeholder="Enter Email" name="email" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
         
       <button type="submit">Login</button>
       <br>

@@ -1,17 +1,13 @@
+
 <?php
-    $servername="localhost";
-    $dbname="Tailoring_Shop_Database";
-    $username="root";
-    $password="";
 
-
-    $db=new mysqli($servername,$username,$password,$dbname);
-
-    if($db->connect_error){
-        die("connection failed: " .$db->connect_error);
-    }
-
-
-
+  $host = "localhost";
+  $dbusername = "root";
+  $dbpassword = "";
+  $dbname ="tailoring_shop_database";
+  // create connection
+  $con = mysqli_connect($host, $dbusername, $dbpassword, $dbname);
+  if (mysqli_connect_error()) 
 
 ?>
+
