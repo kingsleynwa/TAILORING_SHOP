@@ -17,11 +17,13 @@
                 <li><a href="GALLERY.php">Gallery</a></li>
                 <li><a href="ABOUTUS.php">About Us</a></li>
                 <li><a href="LOGIN.php">Log In</a></li>
-                <li><a href="SIGNUP.php">Sign Up</a></li>
+                <li><a href="SignUp.php">Sign Up</a></li>
             </ul>
         </nav>
 
     </header>
+
+    
     <main>
         <img src="assets/images/img1.jpeg" width="100" height="100"alt="CSDM" id="logo">
         <h2>About Us</h2>
@@ -46,6 +48,8 @@
          Nibh tortor id aliquet lectus. Pulvinar neque laoreet suspendisse interdum consectetur libero.</p>  
          <br>
          <hr>
+
+         // unsemantic grid framework was used here 
         <div class="grid-container13">
             <img class="grid-33"  src="assets/images/img6.jpg" width="100" height="300"alt="CSDM" id="cslogo"> 
             <img class="grid-33"  src="assets/images/img28.jpeg" width="100" height="300"alt="CSDM" id="cslogo"> 

@@ -17,7 +17,7 @@
                 <li><a href="GALLERY.php">Gallery</a></li>
                 <li><a href="ABOUTUS.php">About Us</a></li>
                 <li><a href="LOGIN.php">Log In</a></li>
-                <li><a href="SIGNUP.php">Sign Up</a></li>
+                <li><a href="SignUp.php">Sign Up</a></li>
             </ul>
         </nav>
 

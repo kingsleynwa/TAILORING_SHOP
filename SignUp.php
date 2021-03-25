@@ -1,3 +1,46 @@
+ <!--W3schools
+    date 19/03/2021
+    title: SignUp Form 
+    code version: 4.15 December 2020
+    Url: https://www.w3schools.com/howto/howto_css_signup_form.asp
+ -->
+
+ <?php
+require_once('connection.php');
+
+    $email = "";
+    $psw = "";
+    $psw_repeat = "";
+
+  if(isset($_POST['SignUp'])){
+
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $psw = mysqli_real_escape_string($conn, $_POST['psw']);
+    $psw_repeat = mysqli_real_escape_string($conn, $_POST['psw_repeat']);
+
+
+      if($psw != $psw_repeat){
+        echo "Passwords do not match!";
+      }
+
+      $select = mysqli_query($conn, "SELECT * FROM users WHERE email_address = '$email' LIMIT 1");
+
+      $num = mysqli_num_rows($select);
+
+      if($num == 1){
+        echo "Sorry, user already exists on our database!";
+      }else{
+        
+        if($num != 1 && $psw == $psw_repeat){
+        mysqli_query($conn, "INSERT INTO usertable(email_address, password)VALUES('$email', '$psw')");
+        echo "Congratulations, user was registered successfully!";
+        }
+      }
+
+  }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,9 +79,11 @@
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-  <form class="modal-content" action="/action_page.php">
+
+
+  <form class="modal-content" action="" method="POST">
     <div class="container">
-      <form action="SignUp.php" method="post" enctype="multipart/form-data">
+      
       <h1>Sign Up</h1>
       <hr>
       <p>Please fill in this form to create an account.</p>
@@ -50,14 +95,17 @@
       <input type="password" placeholder="Enter Password" name="psw" required>
 
       <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="password" placeholder="Repeat Password" name="psw_repeat" required>
       
       
       
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" class="signupbtn" name="signup">Sign Up</button>
       </div>
+
+
+
     </div>
   </form>
 </div>

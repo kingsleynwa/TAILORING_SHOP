@@ -1,3 +1,22 @@
+<!-- Stewart Massie 
+   date: 1/26/2021
+   title: unsemantic-grid-responsive-tablet
+   code version: mobile/desktop version
+   type: web development
+   Url: http://campusmoodle.rgu.ac.uk/pluginfile.php/5367556/mod_resource/content/0/unsemantic-grid-responsive-tablet.css
+
+
+    W3schools
+    date 19/03/2021
+    title: file upload botton 
+    code version: 4.15 December 2020
+    Url: https://www.w3schools.com/howto/howto_html_file_upload_button.asp
+-->
+
+<?php
+require_once('connection.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +36,7 @@
             <li><a href="GALLERY.php">Gallery</a></li>
             <li><a href="ABOUTUS.php">About Us</a></li>
             <li><a href="LOGIN.php">Log In</a></li>
-            <li><a href="SIGNUP.php">Sign Up</a></li>
+            <li><a href="SignUp.php">Sign Up</a></li>
         </ul>
     </nav>
 
