@@ -44,7 +44,11 @@
 
 <div id="id01" class="modal">
   
+<<<<<<< HEAD
   <form class="modal-content animate" action="login.php" method="post">
+=======
+  <form class="modal-content animate" action="LogIn.php" method="post">
+>>>>>>> 8ea50a58441e776c8f0db9c839dae43d3adef1a2
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
       <img src="assets/images/img1.jpeg" alt="Avatar" class="display">

@@ -6,6 +6,7 @@
  -->
 
  <?php
+<<<<<<< HEAD
 require_once('connection.php');
 
     $email = "";
@@ -38,6 +39,23 @@ require_once('connection.php');
       }
 
   }
+=======
+include('connection.php');
+ if(isset($_POST ['SignUp'])){
+    $email = $_POST['email_address'];
+    $password = $_POST['password'];
+    $repeat_password = $_POST['repeat_password'];
+
+    $sql = "INSERT INTO users (email_address, password, repeat_password) VALUES ('$email
+    ', '$password', '$repeat_password')";
+    mysqli_query($con, $sql);
+    if (mysqli_query($con,$sql)) {
+      $message2 = "SignUp Successful";
+    }
+    else {
+      echo "Error:" .$sql . mysqli_error($con);
+    }
+>>>>>>> 8ea50a58441e776c8f0db9c839dae43d3adef1a2
 ?>
 
 
@@ -62,7 +80,7 @@ require_once('connection.php');
                 <li><a href="GALLERY.php">Gallery</a></li>
                 <li><a href="ABOUTUS.php">About Us</a></li>
                 <li><a href="LOGIN.php">Log In</a></li>
-                <li><a href="SIGNUP.php">Sign Up</a></li>
+                <li><a href="SignUp.php">Sign Up</a></li>
             </ul>
         </nav>
 
@@ -79,23 +97,35 @@ require_once('connection.php');
 
 <div id="id01" class="modal">
   <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+<<<<<<< HEAD
 
 
   <form class="modal-content" action="" method="POST">
+=======
+  <form class="modal-content" >
+   <?php if(isset($message2)){ echo $message2; }?> 
+   <form action="" method="post" enctype="multipart/form-data">
+   
+>>>>>>> 8ea50a58441e776c8f0db9c839dae43d3adef1a2
     <div class="container">
       
       <h1>Sign Up</h1>
       <hr>
       <p>Please fill in this form to create an account.</p>
       <hr>
-      <label for="email"><b>Email</b></label>
+      <label for="email"><b>email</b></label>
       <input type="text" placeholder="Enter Email" name="email" required>
 
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
 
+<<<<<<< HEAD
       <label for="psw-repeat"><b>Repeat Password</b></label>
       <input type="password" placeholder="Repeat Password" name="psw_repeat" required>
+=======
+      <label for="repeat_pssword"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="repeat_password" required>
+>>>>>>> 8ea50a58441e776c8f0db9c839dae43d3adef1a2
       
       
       
