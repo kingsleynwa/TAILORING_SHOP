@@ -33,7 +33,7 @@ require_once('connection.php');
       }else{
         
         if($num != 1 && $psw == $psw_repeat){
-        mysqli_query($conn, "INSERT INTO usertable(email_address, password)VALUES('$email', '$psw')");
+        mysqli_query($conn, "INSERT INTO users(email_address, password)VALUES('$email', '$psw')");
         echo "Congratulations, user was registered successfully!";
         }
       }
